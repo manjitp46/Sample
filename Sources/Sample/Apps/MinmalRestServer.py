@@ -9,13 +9,6 @@ app = Flask(__name__)
 api = Api(app)
 
 
-
-
-    # def post(self):
-    #     pass
-
-
-
 api.add_resource(HelloWorld, "/hello")
 
 if __name__ == "__main__":

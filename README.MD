@@ -25,13 +25,8 @@ cd Sample
 pip install -r requirements.txt
 pip install -e .
 ```
-
-
 ## Usage
 
-To run the development server, use the following command:
-```
-export FLASK_APP=your_flask_project
-export FLASK_ENV=development
-flask run
-```
+~~To run the development server, use the following command:~~
+
+~~export FLASK_APP=your_flask_project~~
