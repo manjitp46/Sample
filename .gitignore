@@ -1,0 +1,32 @@
+# Compiled Python files
+*.pyc
+*.pyo
+
+# Flask-generated files
+instance/
+.webassets-cache
+
+# SQLite database file
+app.db
+
+# Flask environment file
+.env
+
+# Flask debug toolbar logs
+logs/flask_debugtoolbar.log
+
+# Flask-RESTful API Swagger documentation
+/docs/swagger-ui/
+
+# Mac and Linux temporary files
+*.swp
+.DS_Store
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDEs and text editors
+*.sublime-workspace
+*.vscode/
