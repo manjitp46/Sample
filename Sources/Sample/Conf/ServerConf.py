@@ -1,0 +1,7 @@
+HOSTNAME = "0.0.0.0"
+APP_PORT = 5001
+MONGO_DB_HOST = "localhost"
+MONGO_DB_PORT = "27017"
+MONGO_DB_NAME = "test_database"
+MONGO_DB_USER = ""
+MONGO_DB_PASSWORD = ""

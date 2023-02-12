@@ -1,8 +1,5 @@
 # This is a flask project for basic understanding
 
-
-
-
 This project will demostrate how to run sample flask project.
 
 ## Prerequisites
