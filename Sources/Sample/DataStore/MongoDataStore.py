@@ -1,12 +1,17 @@
+import json
 from pymongo import MongoClient
 from Sample.Conf.ServerConf import MONGO_DB_HOST, MONGO_DB_PORT, MONGO_DB_USER, MONGO_DB_PASSWORD
 from Sample.Utils.singleton import singleton
 from Sample.Conf.ServerConf import MONGO_DB_NAME
 from bson.json_util import dumps
+from Sample.Utils.JSONEncoder import JSONEncoder
+from Sample.Utils.BaseObject import BaseObject
+
 
 @singleton
-class MongoDataStore():
+class MongoDataStore(BaseObject):
     def __init__(self) -> None:
+        super().__init__()
         self.__dbHost = MONGO_DB_HOST
         self.__dbPort = MONGO_DB_PORT
         self.__dbUserName = MONGO_DB_USER
@@ -40,6 +45,10 @@ class MongoDataStore():
 
     def GetAllStudents(self):
         studentCollection = self.__DB.students
-        allStudents = list(studentCollection.find())
-        return dumps(allStudents)
+        allStudentsListCurser = list(studentCollection.find())
+        # self.Logger.info("Found x no of Objects")
+        studentData = json.loads(JSONEncoder().encode(allStudentsListCurser))
+        # studentDictData = json.loads(studentJsonData)
+        return studentData
+    #dumps(allStudents)
 
