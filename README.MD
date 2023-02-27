@@ -25,5 +25,5 @@ pip install -e .
 ## Usage
 
 ~~To run the development server, use the following command:~~
-
+~ python Apps/MinmalRestServer.py
 ~~export FLASK_APP=your_flask_project~~
